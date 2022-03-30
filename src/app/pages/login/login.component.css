@@ -1,0 +1,20 @@
+.login-master-container {
+  background-color: rgba(14, 11, 11, 0.774);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 350px;
+  height: 400px;
+  position: absolute;
+  background: black;
+  /* top: calc(( 100% - 400px) / 2); */
+  /* left: calc(( 100% - 350px) / 2); */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}

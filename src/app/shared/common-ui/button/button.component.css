@@ -1,0 +1,39 @@
+.button {
+  background-color: white;
+  width: 120px !important;
+  font-size: 14px;
+  margin: 5px;
+  text-align: center;
+  padding: 12px 32px;
+  border: none;
+  color: white;
+}
+
+.button:active {
+  opacity: 0.5;
+  color: black;
+  background-color: rgb(237 237 237/ 82%);
+}
+.success {
+  background-color: #5cb85b;
+  border: 1px solid #4cae4c;
+}
+.warning {
+  background-color: #f0ad4e;
+  border: 1px solid #eea236;
+}
+.error {
+  background-color: #d9534e;
+  border: 1px solid #d43f39;
+}
+.primary {
+  background-color: rgb(233, 129, 10);
+}
+
+.rounded-corners {
+  border-radius: 50px;
+}
+
+.hover-effect:hover {
+  opacity: 25%;
+}

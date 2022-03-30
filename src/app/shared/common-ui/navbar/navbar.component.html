@@ -1,0 +1,21 @@
+<!--  -->
+<nav class="nav-bar">
+  <div class="nav-menu-container">
+    <div class="nav-mobile-menu">
+      <fx-icons
+        iconName="AppMobileMenu"
+        [iconWidth]="50"
+        [iconHeight]="50"
+      ></fx-icons>
+    </div>
+    <fx-icons iconName="AppIcon" [iconWidth]="80" [iconHeight]="80"></fx-icons>
+    <div class="nav-menu-item-container" *ngIf="showNavMenus">
+      <fx-label textType="NavBarTypes" textColor="blue">Home</fx-label>
+      <fx-label textType="rounded-menu-link" textColor="blue">Gallery</fx-label>
+      <fx-label textType="rounded-menu-link" textColor="blue">Others</fx-label>
+      <!-- <a class="nav-link">Home</a>
+      <a class="nav-link">Gallery</a>
+      <a class="nav-link">Others</a> -->
+    </div>
+  </div>
+</nav>

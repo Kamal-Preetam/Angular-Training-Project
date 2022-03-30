@@ -1,0 +1,45 @@
+.normal-text {
+  font-size: 14px;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
+  letter-spacing: 1px;
+  padding: 5px 8px;
+}
+
+.link-text {
+  color: rgb(10, 166, 238);
+}
+
+.link-text:hover {
+  border-bottom: 1px solid rgb(10, 166, 238);
+  cursor: pointer;
+}
+.rounded-menu-link {
+  justify-content: center;
+  padding: 7px 10px;
+  background-color: #33ffeb;
+  margin-right: 10px;
+  height: 22px;
+  width: 100px;
+  min-width: 120px;
+  border-radius: 5px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.rounded-menu-link:hover {
+  background-color: #00ffe6;
+  color: #035d66 !important;
+}
+.center-text {
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+  display: flex;
+  padding: 10px 8px;
+  margin: 15px;
+}
+
+.left-align-text {
+  display: block;
+}
