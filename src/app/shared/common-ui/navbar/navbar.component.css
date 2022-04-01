@@ -22,6 +22,52 @@
 .nav-link {
   color: white;
 }
+
+.nav-bar-mobile-menu{
+  height: calc(100% - 50px);
+  width: 320px;
+  background-color: white;
+  position: absolute;
+  z-index: 500000;
+  box-shadow: 3px 10px 10px 3px rgb(0 0 0 / 62%);
+  transition: left 1s ease-in;
+}
+
+.show-mobile-menu{
+  left:0px;
+  animation: show-menu 200ms 1 ease-in;
+}
+
+.hide-mobile-menu{
+  left:-320px;
+  animation: hide-menu 200ms 1 ease-in forward;
+  box-shadow: none;
+}
+.nav-bar-sub-container{
+  display: flex;
+  flex-direction: column;
+
+}
+@keyframes hide-menu{
+  0%{
+    transform: translateX(0);
+
+  }
+  100%{
+    transform: translateX(100%);
+    box-shadow: 0;
+  }
+}
+
+
+@keyframes show-menu{
+  0%{
+    transform: translateX(100%)
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
 @media only screen and (max-width: 830px) {
   .nav-mobile-menu {
     display: block;
@@ -29,4 +75,6 @@
   .nav-menu-item-container {
     display: none;
   }
+
+
 }

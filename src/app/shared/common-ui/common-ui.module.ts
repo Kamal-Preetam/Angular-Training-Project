@@ -5,6 +5,7 @@ import { LabelComponent } from './label/label.component';
 import { InputBoxComponent } from './input-box/input-box.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { IconsComponent } from './icons/icons.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { IconsComponent } from './icons/icons.component';
     NavbarComponent,
     IconsComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   exports: [
     ButtonComponent,
     LabelComponent,

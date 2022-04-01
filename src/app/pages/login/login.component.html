@@ -15,7 +15,7 @@
     <input-box [headerTextColor]="'white'" [inputType]="'text'" [placeHolder]="'username'" [headerText]="'username'"></input-box>
     <input-box [headerTextColor]="'white'" [inputType]="'password'" [placeHolder]="'password'" [headerText]="'password'"></input-box>
     <div>
-      <fx-button [roundedCorners]="true" [buttonType]="'primary'">Submit</fx-button>
+      <fx-button [roundedCorners]="true" (click)="validateLogin()" [buttonType]="'primary'">Submit</fx-button>
     </div>
 
   </div>

@@ -1,7 +1,7 @@
 <!--  -->
 <nav class="nav-bar">
   <div class="nav-menu-container">
-    <div class="nav-mobile-menu">
+    <div class="nav-mobile-menu" (click)="toggleMenuBar()">
       <fx-icons
         iconName="AppMobileMenu"
         [iconWidth]="50"
@@ -10,12 +10,49 @@
     </div>
     <fx-icons iconName="AppIcon" [iconWidth]="80" [iconHeight]="80"></fx-icons>
     <div class="nav-menu-item-container" *ngIf="showNavMenus">
-      <fx-label textType="NavBarTypes" textColor="blue">Home</fx-label>
-      <fx-label textType="rounded-menu-link" textColor="blue">Gallery</fx-label>
-      <fx-label textType="rounded-menu-link" textColor="blue">Others</fx-label>
+      <fx-label textType="rounded-menu-link" routerLink="/home" textColor="blue"
+        >Home</fx-label
+      >
+      <fx-label
+        textType="rounded-menu-link"
+        routerLink="/gallery"
+        textColor="blue"
+        >Gallery</fx-label
+      >
+      <fx-label
+        textType="rounded-menu-link"
+        routerLink="/others"
+        textColor="blue"
+        >Others</fx-label
+      >
       <!-- <a class="nav-link">Home</a>
       <a class="nav-link">Gallery</a>
       <a class="nav-link">Others</a> -->
     </div>
   </div>
 </nav>
+<div class="nav-bar-mobile-menu" [ngClass]="getClassForToggleMenu()">
+  <div class="nav-bar-sub-container">
+    <fx-label
+      (click)="toggleMenuBar()"
+      textType="rounded-menu-link"
+      routerLink="/home"
+      textColor="blue"
+      >Home</fx-label
+    >
+    <fx-label
+      (click)="toggleMenuBar()"
+      textType="rounded-menu-link"
+      routerLink="/gallery"
+      textColor="blue"
+      >Gallery</fx-label
+    >
+    <fx-label
+      (click)="toggleMenuBar()"
+      textType="rounded-menu-link"
+      routerLink="/others"
+      textColor="blue"
+      >Others</fx-label
+    >
+  </div>
+</div>
