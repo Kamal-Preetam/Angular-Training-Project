@@ -5,6 +5,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { CanAccessScreenService } from './shared/services/auth-guard/can-access-screens.service';
 
 // const routes: Routes = [
 //   {
@@ -32,6 +33,7 @@ import { SettingsComponent } from './pages/settings/settings.component';
 const routes: Routes = [
   {
     path: 'home',
+    canActivate: [CanAccessScreenService],
     loadChildren: () =>
       import('./pages/home/home.module').then((module) => module.HomeModule),
   },
@@ -42,6 +44,7 @@ const routes: Routes = [
   },
   {
     path: 'gallery',
+    canActivate: [CanAccessScreenService],
     loadChildren: () =>
       import('./pages/gallery/gallery.module').then(
         (module) => module.GalleryModule
@@ -49,6 +52,7 @@ const routes: Routes = [
   },
   {
     path: 'settings',
+    canActivate: [CanAccessScreenService],
     loadChildren: () =>
       import('./pages/settings/settings.module').then(
         (module) => module.SettingsModule
@@ -56,6 +60,7 @@ const routes: Routes = [
   },
   {
     path: 'about-us',
+    canActivate: [CanAccessScreenService],
     loadChildren: () =>
       import('./pages/about-us/about-us.module').then(
         (module) => module.AboutUsModule

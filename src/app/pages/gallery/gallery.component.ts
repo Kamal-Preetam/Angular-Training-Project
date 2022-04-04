@@ -15,7 +15,8 @@ export class GalleryComponent {
     //   .subscribe((data: GalleryImageCard[]) => {
     //     console.log(data);
     //     this.galleryData = data;
-    //   });
+    //   });z
+    sessionStorage.setItem('loginSuccess', 'success'); //5Mb
   }
   trackDomITems(index: number) {
     return index;

@@ -11,6 +11,9 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   validateLogin() {
+    ///
+    localStorage.setItem('loginSuccess', 'success'); //10MB
+    sessionStorage.setItem('loginSuccess', 'success'); //5Mb
     this.router.navigate(['/home']);
   }
 }
