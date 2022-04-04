@@ -6,6 +6,9 @@ import { InputBoxComponent } from './input-box/input-box.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { IconsComponent } from './icons/icons.component';
 import { RouterModule } from '@angular/router';
+import { ImageCardsComponent } from './image-cards/image-cards.component';
+import { ImageSizeOptimizerPipe } from '../pipes/image-size-optimizer.pipe';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,9 @@ import { RouterModule } from '@angular/router';
     InputBoxComponent,
     NavbarComponent,
     IconsComponent,
+    ImageCardsComponent,
+    ImageSizeOptimizerPipe,
+    PaginationComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -22,6 +28,9 @@ import { RouterModule } from '@angular/router';
     InputBoxComponent,
     IconsComponent,
     NavbarComponent,
+    ImageCardsComponent,
+    ImageSizeOptimizerPipe,
+    PaginationComponent,
   ],
 })
 export class CommonUiModule {}

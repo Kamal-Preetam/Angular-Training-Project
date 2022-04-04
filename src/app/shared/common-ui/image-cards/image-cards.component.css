@@ -1,0 +1,16 @@
+img{
+  /* width: 100px; */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.image-card{
+  display: flex;
+  flex-direction: column;
+  width:14rem;
+  background-color: #fff;
+  margin: 8px 10px;
+  box-shadow: 0 2px 7px 0 rgb(0 0 0 / 43%);
+  border-radius: 5px;
+  height: calc(100% - 16px);
+}

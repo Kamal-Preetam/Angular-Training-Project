@@ -1,0 +1,9 @@
+<div class="image-card">
+  <img [src]="cardData?.download_url | imageSizeOptimizer" />
+  <div class="sub-card-body">
+    <fx-label [textType]="'block-text'"
+      >AuthorName: {{ cardData?.author }}</fx-label
+    >
+    <fx-label [textType]="'block-text'">ID: {{ cardData?.id }}</fx-label>
+  </div>
+</div>

@@ -1,1 +1,9 @@
-<p>gallery works!</p>
+<div class="card-main-container">
+  <div class="pagination-container">
+    <fx-pagination [numberOfPages]="10"></fx-pagination>
+  </div>
+
+  <div class="card-container" *ngFor="let items of galleryData">
+    <fx-image-cards [cardData]="items"></fx-image-cards>
+  </div>
+</div>

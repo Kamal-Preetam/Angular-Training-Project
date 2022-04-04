@@ -44,6 +44,15 @@
   display: block;
 }
 
+.block-text{
+  font-size: 14px;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
+    letter-spacing: 1px;
+    padding: 10px 8px 5px 8px;
+    display: block;
+    min-height: 40px;
+}
+
 @media only screen and (max-width: 830px){
   .rounded-menu-link{
     border-radius: 0;
