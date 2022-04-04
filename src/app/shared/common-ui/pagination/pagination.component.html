@@ -1,9 +1,18 @@
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item" *ngFor="let page of createPageIndex()">
-      <a class="page-link" href="#">{{ page }}</a>
+    <li class="page-item">
+      <a class="page-link" (click)="goToPreviousPage()">Previous</a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    <li class="page-item" *ngFor="let page of numberOfPages | convertToArray">
+      <a
+        class="page-link"
+        [ngClass]="addActivePageClass(page)"
+        (click)="setSelectedPageIndex(page)"
+        >{{ page }}</a
+      >
+    </li>
+    <li class="page-item">
+      <a class="page-link" (click)="goToNextPage()">Next</a>
+    </li>
   </ul>
 </nav>

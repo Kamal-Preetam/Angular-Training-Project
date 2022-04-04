@@ -1,9 +1,15 @@
 <div class="card-main-container">
   <div class="pagination-container">
-    <fx-pagination [numberOfPages]="10"></fx-pagination>
+    <fx-pagination
+      [numberOfPages]="10"
+      (selectedPage)="sendRequest($event)"
+    ></fx-pagination>
   </div>
 
-  <div class="card-container" *ngFor="let items of galleryData">
+  <div
+    class="card-container"
+    *ngFor="let items of galleryData; let i = index; trackBy: trackDomITems"
+  >
     <fx-image-cards [cardData]="items"></fx-image-cards>
   </div>
 </div>

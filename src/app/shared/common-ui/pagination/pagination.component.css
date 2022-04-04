@@ -29,3 +29,10 @@
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
+
+.page-link:hover,
+ .page-link.active {
+  background-color: #007bff;
+  color: white;
+}
+
