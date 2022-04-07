@@ -25,10 +25,21 @@
         textColor="blue"
         >Others</fx-label
       >
+
       <!-- <a class="nav-link">Home</a>
       <a class="nav-link">Gallery</a>
       <a class="nav-link">Others</a> -->
     </div>
+    <span class="cart-container">
+      <fx-icons
+        iconName="CartIcon"
+        [iconWidth]="57"
+        [iconHeight]="55"
+      ></fx-icons>
+      <fx-label textType="cart-count-label" textColor="#002A41">
+        {{ cartService.totalItemsCountInCart }}
+      </fx-label></span
+    >
   </div>
 </nav>
 <div class="nav-bar-mobile-menu" [ngClass]="getClassForToggleMenu()">
@@ -53,6 +64,13 @@
       routerLink="/others"
       textColor="blue"
       >Others</fx-label
+    >
+    <fx-label
+      (click)="toggleMenuBar()"
+      textType="rounded-menu-link"
+      routerLink="/others"
+      textColor="blue"
+      >1</fx-label
     >
   </div>
 </div>

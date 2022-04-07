@@ -5,5 +5,8 @@
       >AuthorName: {{ cardData?.author }}</fx-label
     >
     <fx-label [textType]="'block-text'">ID: {{ cardData?.id }}</fx-label>
+    <fx-button (click)="addToCart()" [buttonType]="'flat-button'"
+      >Add To cart {{ itemCount ? " : " + itemCount : "" }}</fx-button
+    >
   </div>
 </div>

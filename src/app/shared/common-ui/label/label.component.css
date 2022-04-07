@@ -27,6 +27,7 @@
   text-align: center;
 }
 
+
 .rounded-menu-link:hover {
   background-color: #00ffe6;
   color: #035d66 !important;
@@ -51,6 +52,16 @@
     padding: 10px 8px 5px 8px;
     display: block;
     min-height: 40px;
+}
+
+.cart-count-label{
+  color: #002A41;
+  font-size: 1em;
+  position: absolute;
+  top: -4px;
+    right: 20.5px;
+  font-weight: bold;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
 }
 
 @media only screen and (max-width: 830px){

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GalleryImageCard } from 'src/app/shared/models/gallery-image-card/gallery-image-card.model';
+import { CartService } from 'src/app/shared/services/cart/cart.service';
 import { GalleryService } from 'src/app/shared/services/gallery-services/gallery.service';
 
 @Component({
@@ -9,7 +10,14 @@ import { GalleryService } from 'src/app/shared/services/gallery-services/gallery
 })
 export class GalleryComponent {
   galleryData: GalleryImageCard[] = [];
-  constructor(private galleryService: GalleryService) {
+  // cartItemCount: number = 0;
+  // cartItemsList: Array<any> = [{ id: '', numberOfPurchases: 0 }];
+
+  individualItemCount = 0;
+  constructor(
+    private galleryService: GalleryService,
+    private cartService: CartService
+  ) {
     // this.galleryService
     //   .getAllPhotosByURL(5, 20)
     //   .subscribe((data: GalleryImageCard[]) => {
@@ -28,5 +36,11 @@ export class GalleryComponent {
         console.log(data);
         this.galleryData = data;
       });
+  }
+  setItemCount(item: any) {
+    this.cartService.setTotalPurchaseOnAddToCart(item);
+  }
+  sendItemCount(item: any) {
+    return this.cartService.getIndividualItemCount(item);
   }
 }

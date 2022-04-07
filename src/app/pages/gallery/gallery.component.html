@@ -10,6 +10,10 @@
     class="card-container"
     *ngFor="let items of galleryData; let i = index; trackBy: trackDomITems"
   >
-    <fx-image-cards [cardData]="items"></fx-image-cards>
+    <fx-image-cards
+      (itemSelected)="setItemCount($event)"
+      [cardData]="items"
+      [itemCount]="sendItemCount(items)"
+    ></fx-image-cards>
   </div>
 </div>

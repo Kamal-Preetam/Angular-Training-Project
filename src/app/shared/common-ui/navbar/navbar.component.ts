@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'fx-navbar',
@@ -9,7 +10,11 @@ import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 export class NavbarComponent {
   showNavMenus: boolean = false;
   toggleMenu: boolean = false;
-  constructor(private router: Router) {
+  totalItemsCount: number = 0;
+  constructor(private router: Router, public cartService: CartService) {
+    //cartService
+
+    // Routing
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
         console.log('Hi');
@@ -30,9 +35,8 @@ export class NavbarComponent {
     this.toggleMenu = !this.toggleMenu;
   }
 
-  getClassForToggleMenu(){
-
-    return this.toggleMenu?'show-mobile-menu':'hide-mobile-menu'
+  getClassForToggleMenu() {
+    return this.toggleMenu ? 'show-mobile-menu' : 'hide-mobile-menu';
   }
 }
 

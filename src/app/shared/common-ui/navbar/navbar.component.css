@@ -48,6 +48,20 @@
   flex-direction: column;
 
 }
+.cart-container{
+  position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    right: 15px;
+    top: 5px;
+}
+
+.cart-container:hover{
+  cursor: pointer;
+  color:#5e98b8fb;
+}
+
 @keyframes hide-menu{
   0%{
     transform: translateX(0);

@@ -37,3 +37,9 @@
 .hover-effect:hover {
   opacity: 25%;
 }
+.flat-button{
+  width:100% !important;
+  margin:0;
+  background-color: #007BFF;
+  border-radius: 0 0 5px 5px;
+}
